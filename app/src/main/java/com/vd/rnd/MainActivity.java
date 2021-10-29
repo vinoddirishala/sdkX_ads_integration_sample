@@ -20,18 +20,7 @@ public class MainActivity extends AppCompatActivity implements AdLoadCallback {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        // Initialize the GreedyGame SDK with AppConfig
-        AppConfig appConfig = new AppConfig.Builder(this)
-                .withAppId("62989716")
-                .build();
-
-        GreedyGameAds.initWith(appConfig,null);
-
         setContentView(R.layout.activity_main);
-
-
-
 
         ggAdView = findViewById(R.id.ggAdView);
         ggAdView.loadAd(this);
